@@ -1,0 +1,21 @@
+.banner {
+  height: 375px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner > img {
+  position: absolute;
+  z-index: -1;
+}
+.banner-text {
+  color: #fff;
+  font-size: 5em;
+  line-height: 360px;
+  text-align: center;
+}
+.banner-text > .em {
+  font-size: 2em;
+  position: relative;
+  top: 12px;
+}

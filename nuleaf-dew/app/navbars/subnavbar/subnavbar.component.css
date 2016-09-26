@@ -1,0 +1,20 @@
+.navbar-widespread > li {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.navbar-clean {
+  border-radius: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.navbar-transparent {
+  opacity: .93;
+}
+.navbar-center {
+  float: none;
+  text-align: center
+}
+.navbar-center > li {
+  display: inline-block;
+  float: none;
+}
