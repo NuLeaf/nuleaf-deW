@@ -16,23 +16,30 @@
 
       <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav navbar-spread pull-right-sm text-uppercase text-center">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="hidden-xs"><a href="#events-nav" data-toggle="collapse">Events</a></li>
-          <li class="dropdown visible-xs-block">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="text-center"><a href="#">Upcoming Events </a></li>
-              <li class="active text-center"><a href="#">STEMinars </a></li>
-              <li class="text-center"><a href="#">Calendar</a></li>
-            </ul>
+          <li routerLink="/"
+              routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }"
+             (click)="hideSubnavbar()">
+            <a>Home</a>
           </li>
-          <li><a href="#">Blog</a></li>
+          <li routerLink="/about"
+              routerLinkActive="active"
+              (click)="hideSubnavbar()">
+            <a>About</a>
+          </li>
+          <li (click)="toggleSubnavbar(eventLinks)"
+              [class.active]="isShowingSubnavbar && sublinks == eventLinks">
+            <a>Events</a>
+          </li>
+          <li routerLink="/blog"
+              routerLinkActive="active"
+             (click)="hideSubnavbar">
+            <a>Blog</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-  <ng-subnavbar></ng-subnavbar>
+  <ng-subnavbar *ngIf="isShowingSubnavbar"
+                [links]="sublinks"></ng-subnavbar>
 </div>

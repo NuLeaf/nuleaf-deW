@@ -11,11 +11,11 @@
 .banner-text {
   color: #fff;
   font-size: 5em;
-  line-height: 360px;
+  line-height: 315px;
   text-align: center;
 }
 .banner-text > .em {
   font-size: 2em;
   position: relative;
-  top: 12px;
+  top: 20px;
 }

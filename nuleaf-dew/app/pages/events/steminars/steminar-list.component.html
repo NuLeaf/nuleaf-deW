@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <template ngFor let-steminar [ngForOf]="steminars" let-i="index">
+      <div class="col-sm-6 steminar">
+        <h3 class="text-capitalize">{{ steminar.title }}</h3>
+        <div class="steminar-img">
+          <img src="{{ steminar.imageUrl }}" class="img-rounded" />
+        </div>
+        <div class="steminar-body">
+          <div class="datetime">{{ steminar.date }}</div>
+          <p>
+            {{ steminar.description }}
+          </p>
+          <p>
+            <a>Find out more
+              <i class="fa fa-chevron-circle-right"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="clearfix" [class.visible-xs-block]="i % 2 === 0"></div>
+    </template>
+  </div>
+</div>

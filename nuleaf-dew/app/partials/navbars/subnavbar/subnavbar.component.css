@@ -12,7 +12,7 @@
 }
 .navbar-center {
   float: none;
-  text-align: center
+  text-align: center;
 }
 .navbar-center > li {
   display: inline-block;

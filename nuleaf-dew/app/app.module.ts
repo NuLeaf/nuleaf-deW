@@ -1,12 +1,16 @@
 import { NgModule }           from '@angular/core';
 import { BrowserModule }      from '@angular/platform-browser';
 
-import { AppComponent }       from './app.component';
-import { NavbarComponent }    from './navbars/navbar.component';
-import { SubnavbarComponent } from './navbars/subnavbar/subnavbar.component';
-import { BannerComponent }    from './banner/banner.component'
+import { SteminarsModule }    from './pages/events/steminars/steminars.module';
 
-import { SteminarsComponent } from './events/steminars/steminars.component';
+import { AppComponent }       from './app.component';
+import { NavbarComponent }    from './partials/navbars/navbar.component';
+import { SubnavbarComponent } from './partials/navbars/subnavbar/subnavbar.component';
+import { FooterComponent }    from './partials/footer/footer.component';
+
+import { HomeComponent }      from './pages/home/home.component';
+import { AboutComponent }     from './pages/about/about.component';
+import { BlogComponent }      from './pages/blog/blog.component';
 
 import { routing } from './app.routing';
 
@@ -14,16 +18,20 @@ import { routing } from './app.routing';
 @NgModule({
   imports: [
     BrowserModule,
-    routing
+    routing,
+    SteminarsModule
   ],
   declarations: [
     AppComponent,
     NavbarComponent,
     SubnavbarComponent,
-    BannerComponent,
+    FooterComponent,
 
-    SteminarsComponent
+    HomeComponent,
+    AboutComponent,
+    BlogComponent
   ],
+  providers: [],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
