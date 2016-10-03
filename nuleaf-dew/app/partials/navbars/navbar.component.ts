@@ -1,18 +1,31 @@
 import {
   Component,
-  ElementRef }  from '@angular/core';
+  ElementRef }    from '@angular/core';
+import { Router } from '@angular/router';
 
-import { Link } from './link';
+import { Link }   from './link';
 
 
 @Component({
   selector: 'ng-navbar',
   templateUrl: 'app/partials/navbars/navbar.component.html',
   styleUrls: ['app/partials/navbars/navbar.component.css'],
-  host: {'(document:click)': 'hideSubnavbar($event)'},
+  host: {
+    '(document:click)': 'onClick($event)',
+    '(window:scroll)' : 'onScroll()'
+  },
 })
 export class NavbarComponent {
-  constructor(private _elementRef: ElementRef) { }
+  constructor(
+    private _elementRef: ElementRef,
+    private router: Router) {
+    router.events.subscribe(event => {
+      switch (event.url) {
+      case '/steminars':
+        this.sublinks = this.eventLinks;
+      };
+    });
+  }
 
   sublinks: Link[] = [];
   isShowingSubnavbar: boolean = false;
@@ -23,22 +36,38 @@ export class NavbarComponent {
     { text: 'Calendar',        url: '/calendar'}
   ];
 
-  hideSubnavbar(event?) {
-    if (event) {
-      if (!this._elementRef.nativeElement.contains(event.target)) {
-        this.isShowingSubnavbar = false;
-      }
-      return;
-    }
+  setLinks(links: Link[]) {
+    this.sublinks = links;
+  }
+
+  hideSubnavbar() {
     this.isShowingSubnavbar = false;
   };
-  
-  toggleSubnavbar(links: Link[]) {
-    if (this.isShowingSubnavbar) {
-      this.sublinks = [];
-    } else {
-      this.sublinks = links;
+
+  showSubnavbar() {
+    if (this.sublinks.length > 0) {
+      this.isShowingSubnavbar = true;
     }
+  }
+  
+  toggleSubnavbar() {
     this.isShowingSubnavbar = !this.isShowingSubnavbar;
+  };
+
+  onClick(event) {
+    if (!this._elementRef.nativeElement.contains(event.target)) {
+      this.hideSubnavbar();
+    }
+  };
+
+  prevScrolTop: number = 0;
+  onScroll() {
+    let currentScrollTop = document.body.scrollTop;
+    if (currentScrollTop > this.prevScrolTop) {  // Scrolling down.
+      this.hideSubnavbar();
+    } else {                                     // Scrolling up.
+      this.showSubnavbar();
+    }
+    this.prevScrolTop = currentScrollTop;
   };
 };

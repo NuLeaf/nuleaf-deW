@@ -27,7 +27,7 @@
               (click)="hideSubnavbar()">
             <a>About</a>
           </li>
-          <li (click)="toggleSubnavbar(eventLinks)"
+          <li (click)="setLinks(eventLinks); toggleSubnavbar();"
               [class.active]="isShowingSubnavbar && sublinks == eventLinks">
             <a>Events</a>
           </li>
