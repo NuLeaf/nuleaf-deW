@@ -47,7 +47,7 @@ npm install
 If after the installation the `typings` directory does not exist, install it manually with `npm run typings install`
 
 ### Set application configurations.
-Our Angular2 app requires a backend server (nuleaf-source) for all of its resources ( events, steminars, users, etc...). To let our app know where that server is, we need to set up our configurations to point to our server. If you're running nuleaf-source locally, the address should be `http://localhost:3000`.
+Our Angular2 app requires a backend server (nuleaf-source) for all of its resources ( events, steminars, users, etc...). To let our app know where that server is, we need to set up our configurations to point to our server. If you're running nuleaf-source locally, the address should be `http://localhost:3001`.
 
 ### Run the application.
 ```
