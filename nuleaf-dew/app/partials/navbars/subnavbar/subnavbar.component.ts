@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component,
+         Input }      from '@angular/core';
 
-import { animations }       from '../../../app.animations';
+import { animations } from '../../../app.animations';
 
-import { Link }             from '../link'
+import { Link }       from '../link'
 
 
 @Component({

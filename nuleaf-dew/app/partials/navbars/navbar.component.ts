@@ -1,9 +1,8 @@
-import {
-  Component,
-  ElementRef }    from '@angular/core';
-import { Router } from '@angular/router';
+import { Component,
+         ElementRef } from '@angular/core';
+import { Router }     from '@angular/router';
 
-import { Link }   from './link';
+import { Link }       from './link';
 
 
 @Component({
