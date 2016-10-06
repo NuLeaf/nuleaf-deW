@@ -22,13 +22,18 @@ export class NavbarComponent {
     router.events.subscribe(event => {
       switch (event.url) {
       case '/steminars':
-        this.sublinks = this.eventLinks;
+        this.setLinks(this.eventLinks);
+        this.showSubnavbar();
+        break;
+      default:
+        this.hideSubnavbar();
+        this.setLinks([]);
       };
     });
   }
 
   sublinks: Link[] = [];
-  isShowingSubnavbar: boolean = false;
+  isShowingSubnavbar: boolean;
 
   eventLinks: Link[] = [
     { text: 'Upcoming Events', url: '/upcoming-events'},
