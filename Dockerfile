@@ -1,9 +1,13 @@
 FROM node:slim
 MAINTAINER Nuleaf Technologies
 
-COPY ./nuleaf-dew /nuleaf-dew
 WORKDIR /nuleaf-dew
 
-RUN npm install && npm run typings install
+COPY ./nuleaf-dew/package.json /tmp/package.json
+COPY ./nuleaf-dew/typings.json /tmp/typings.json
+RUN cd /tmp && npm install && npm run typings install
+
+COPY ./nuleaf-dew /nuleaf-dew
+RUN cp -a /tmp/node_modules . && cp -a /tmp/typings .
 
 ENTRYPOINT ["npm", "start"]
