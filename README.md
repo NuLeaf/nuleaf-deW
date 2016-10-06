@@ -19,7 +19,7 @@ docker run -dit
            --name nuleaf-dew
            -p 3000:3000
            --link nuleaf-source:nuleaf-source
-           -e NULEAF_SOURCE_URL=http://nuleaf-source:3000
+           -e NULEAF_SOURCE_URL=http://nuleaf-source:3001
            nuleaf-dew
 ```
 
