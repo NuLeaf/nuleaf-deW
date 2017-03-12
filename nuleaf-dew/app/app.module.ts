@@ -1,37 +1,44 @@
-import { NgModule }           from '@angular/core';
-import { BrowserModule }      from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { SteminarsModule }    from './pages/events/steminars/steminars.module';
+import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent }       from './app.component';
-import { NavbarComponent }    from './partials/navbars/navbar.component';
-import { SubnavbarComponent } from './partials/navbars/subnavbar/subnavbar.component';
-import { FooterComponent }    from './partials/footer/footer.component';
+import { AppComponent } from './app.component';
 
-import { HomeComponent }      from './pages/home/home.component';
-import { AboutComponent }     from './pages/about/about.component';
-import { BlogComponent }      from './pages/blog/blog.component';
+import { NavbarComponent } from './partials/navbar/navbar.component';
+import { BannerComponent } from './partials/banner/banner.component';
+import { FooterComponent } from './partials/footer/footer.component';
 
-import { routing } from './app.routing';
+import { LandingComponent } from './pages/landing/landing.component';
+
+import { MissionComponent } from './pages/about/mission/mission.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    routing,
-    SteminarsModule
+    HttpModule,
+
+    NgbModule.forRoot(),
+
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
+
     NavbarComponent,
-    SubnavbarComponent,
+    BannerComponent,
     FooterComponent,
 
-    HomeComponent,
-    AboutComponent,
-    BlogComponent
+    LandingComponent,
+
+    MissionComponent
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 
+import './rxjs-imports';
+
 
 @Component({
-  selector: 'ng-app',
-  templateUrl: 'app/app.component.html',
-  styleUrls: ['app/app.component.css']
+  moduleId: module.id,
+  selector: 'nl-app',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
-export class AppComponent {};
+export class AppComponent {}

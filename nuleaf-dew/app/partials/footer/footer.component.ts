@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'ng-footer',
-  templateUrl: 'app/partials/footer/footer.component.html',
-  styleUrls: ['app/partials/footer/footer.component.css']
+  moduleId: module.id,
+  selector: 'nl-footer',
+  templateUrl: 'footer.component.html',
+  styleUrls: [
+    'footer.component.css',
+    '../../../public/css/form-controls.css'
+  ]
 })
-export class FooterComponent {
-
-}
+export class FooterComponent {}

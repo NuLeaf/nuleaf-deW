@@ -1,0 +1,9 @@
+html, body {
+  height: 100%;
+}
+.inner-content {
+  margin-bottom: 30px
+}
+.inner-content.no-margin-bottom {
+  margin-bottom: 0;
+}

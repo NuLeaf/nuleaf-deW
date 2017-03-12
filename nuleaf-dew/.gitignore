@@ -1,5 +1,8 @@
-/dist
-/node_modules
-/typings
+aot/
+!aot/index/html
+dist/
+node_modules/
+typings/
+
 
 npm-debug.log

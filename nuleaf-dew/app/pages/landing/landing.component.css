@@ -1,0 +1,61 @@
+.btn-clean {
+  background: rgba(0, 0, 0, 0);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 3em;
+}
+.btn-clean:hover {
+  background: rgba(200, 200, 200, .5);
+}
+.slide {
+  height: 95vh;
+  position: relative;
+}
+.slide-text {
+  color: #fff;
+  font-size: 1.4em;
+  padding: 30px;
+  position: absolute;
+}
+.slide-text > p {
+  margin: 30px 0;
+}
+.slide-text > .btn-lg {
+  font-size: 1.1em;
+}
+#slide-join-us {
+  background: url(public/images/bg/lg/sharp-leaf.jpg) center center no-repeat;
+}
+#slide-join-us > .slide-text {
+  right: 25%;
+  top: 20%;
+}
+#slide-join-us > .slide-text h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#slide-join-us .btn {
+  position: absolute;
+  right: 5%;
+  bottom: 25%;
+}
+#slide-microbial-fuel-cell {
+  background: url(public/images/bg/lg/usb.jpg) center center no-repeat;
+}
+#slide-microbial-fuel-cell > .slide-text {
+  right: 0;
+  bottom: 0;
+}
+#slide-biomimicry {
+  background: url(public/images/bg/lg/sun.jpg) center center no-repeat;
+}
+#slide-quote {
+  background: url(public/images/bg/lg/cliff.jpg) center center no-repeat;
+}
+#slide-quote > .slide-text {
+  bottom: 10%;
+  text-align: center;
+  width: 100%;
+}

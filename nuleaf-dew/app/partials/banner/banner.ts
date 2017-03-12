@@ -1,1 +1,0 @@
-export interface Banner { imageUrl: string, text: string }
