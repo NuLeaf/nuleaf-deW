@@ -1,9 +1,26 @@
-html, body {
-  height: 100%;
+.btn-transparent {
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.2s, border-color 0.3s;
+  -moz-transition: background-color 0.2s, border-color 0.3s;
+  -o-transition: background-color 0.2s, border-color 0.3s;
+  transition: background-color 0.2s, border-color 0.3s;
 }
-.inner-content {
-  margin-bottom: 30px
+.btn-transparent:after {
+  font-family: FontAwesome;
+  content: '\f105';
+  margin-left: -30px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: margin 0.2s, opacity 0.2s;
+  -moz-transition: margin 0.2s, opacity 0.2s;
+  -o-transition: margin 0.2s, opacity 0.2s;
+  transition: margin 0.2s, opacity 0.2s;
 }
-.inner-content.no-margin-bottom {
-  margin-bottom: 0;
+.btn-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent !important;
+}
+.btn-transparent:hover:after {
+  opacity: 1;
+  margin-left: 10px;
 }

@@ -1,4 +1,10 @@
 .content {
   min-height: 70%;
-  margin-top: 51px;
+  margin-top: 54px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    margin-top: 76px;
+  }
 }

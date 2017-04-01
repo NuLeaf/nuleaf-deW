@@ -1,61 +1,198 @@
-.btn-clean {
-  background: rgba(0, 0, 0, 0);
-  border: 5px solid #fff;
-  border-radius: 5px;
+.slide-btn {
+  border: 10px solid #fff;
+  border-radius: 10px;
   color: #fff;
   padding: 10px 30px;
   font-size: 3em;
-}
-.btn-clean:hover {
-  background: rgba(200, 200, 200, .5);
 }
 .slide {
   height: 95vh;
   position: relative;
 }
+.slide-body {
+  padding: 0 15px;
+}
 .slide-text {
   color: #fff;
   font-size: 1.4em;
-  padding: 30px;
-  position: absolute;
 }
-.slide-text > p {
-  margin: 30px 0;
-}
-.slide-text > .btn-lg {
-  font-size: 1.1em;
-}
-#slide-join-us {
+
+#slide-1 {
   background: url(public/images/bg/lg/sharp-leaf.jpg) center center no-repeat;
+  background-size: cover;
 }
-#slide-join-us > .slide-text {
-  right: 25%;
-  top: 20%;
+.slide-1-text {
+  margin-top: 10px;
 }
-#slide-join-us > .slide-text h1 {
-  margin-bottom: 0;
-  margin-top: 0;
+#slide-1 > .slide-text {
+  position: relative;
+  top: 16%;
 }
-#slide-join-us .btn {
+#slide-1-text-1 {
+  margin-left: 5%;
+}
+#slide-1-text-2 {
+  margin-left: 23%;
+}
+#slide-1-text-3 {
+  margin-left: 40%;
+}
+#slide-1 > .slide-btn-wrapper {
   position: absolute;
-  right: 5%;
-  bottom: 25%;
+  bottom: 5%;
+  margin-left: 5%;
 }
-#slide-microbial-fuel-cell {
+
+#slide-2 {
   background: url(public/images/bg/lg/usb.jpg) center center no-repeat;
+  background-size: cover;
 }
-#slide-microbial-fuel-cell > .slide-text {
-  right: 0;
-  bottom: 0;
-}
-#slide-biomimicry {
-  background: url(public/images/bg/lg/sun.jpg) center center no-repeat;
-}
-#slide-quote {
-  background: url(public/images/bg/lg/cliff.jpg) center center no-repeat;
-}
-#slide-quote > .slide-text {
-  bottom: 10%;
-  text-align: center;
+#slide-2 > .slide-body {
+  position: absolute;
+  bottom: 5%;
   width: 100%;
+}
+
+#slide-3 {
+  background: url(public/images/bg/lg/sun.jpg) center center no-repeat;
+  background-size: cover;
+}
+#slide-3 > .slide-body {
+  position: absolute;
+  bottom: 5%;
+  text-align: right;
+  width: 100%;
+}
+#slide-3 .slide-text {
+  color: #330601;
+}
+#slide-3 .slide-btn {
+  color: #330601;
+  border-color: #330601;
+}
+
+#slide-4 {
+  background: url(public/images/bg/lg/cliff.jpg) center center no-repeat;
+  background-size: cover;
+}
+#slide-4 .slide-text {
+  position: absolute;
+  bottom: 10%;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #slide-1 > .slide-text {
+    top: 20%;
+  }
+  #slide-1-text-1 {
+    margin-left: 35%;
+  }
+  #slide-1-text-2 {
+    margin-left: 50%;
+  }
+  #slide-1-text-3 {
+    margin-left: 65%;
+  }
+  #slide-1 > .slide-btn-wrapper {
+    margin-left: 10%;
+    bottom: 10%;
+  }
+
+  #slide-2 .slide-text,
+  #slide-2 .slide-btn-wrapper {
+    width: 60%;
+    float: right;
+    clear: both;
+  }
+  #slide-2 .slide-btn-wrapper {
+    text-align: center;
+  }
+
+  #slide-3 .slide-text {
+    float: right;
+    width: 60%;
+  }
+  #slide-3 .slide-btn-wrapper {
+    clear: both;
+  }
+}
+
+@media (min-width: 992px) {
+  #slide-1-text-1 {
+    margin-left: 48%;
+  }
+  #slide-1-text-2 {
+    margin-left: 59%;
+  }
+  #slide-1-text-3 {
+    margin-left: 70%;
+  }
+
+  #slide-2 .slide-text,
+  #slide-2 .slide-btn-wrapper {
+    width: 50%;
+  }
+
+  #slide-3 .slide-text {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #slide-1-text-1 {
+    margin-left: 55%;
+  }
+  #slide-1-text-2 {
+    margin-left: 65%;
+  }
+  #slide-1-text-3 {
+    margin-left: 75%;
+  }
+
+  #slide-2 .slide-text,
+  #slide-2 .slide-btn-wrapper {
+    width: 35%;
+  }
+
+  #slide-3 .slide-body {
+    text-align: left;
+  }
+  #slide-3 .slide-text {
+    color: #fff;
+    float: left;
+    width: 30%;
+  }
+  #slide-3 .slide-btn {
+    border-color: #fff;
+    color: #fff;
+    float: left;
+  }
+}
+
+@media (min-width: 1600px) {
+  #slide-1-text-1 {
+    margin-left: 60%;
+  }
+  #slide-1-text-2 {
+    margin-left: 67%;
+  }
+  #slide-1-text-3 {
+    margin-left: 75%;
+  }
+  #slide-1 > .slide-btn-wrapper {
+    bottom: 25%;
+    margin-left: 78%;
+  }
+
+  #slide-2 .slide-text,
+  #slide-2 .slide-btn-wrapper {
+    width: 25%;
+  }
+
+  #slide-3 .slide-text {
+    width: 25%;
+  }
 }

@@ -1,19 +1,9 @@
-import { Component,
-         ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
-  moduleId: module.id,
   selector: 'nl-landing',
-  templateUrl: 'landing.component.html',
-  styleUrls: ['landing.component.css'],
-  host: {
-    '(window:scroll)': 'onScroll()'
-  }
+  templateUrl: './landing.component.html',
+  styleUrls: ['./landing.component.css'],
 })
-export class LandingComponent {
-  constructor(private el: ElementRef) {}
-
-  onScroll(): void {
-  }
-}
+export class LandingComponent {}

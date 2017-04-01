@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { Router,
-         Event } from '@angular/router';
+         Event,
+         NavigationEnd } from '@angular/router';
+
+import { animations } from './navbar.animations';
+
 
 interface Navigation {
   text: string;
-  sublinks?: Link[];
-}
-
-interface Link {
-  text: string;
-  url: string;
+  link?: string;
+  sublinks?: Navigation[];
 }
 
 
 @Component({
-  moduleId: module.id,
   selector: 'nl-navbar',
-  templateUrl: 'navbar.component.html',
-  styleUrls: ['navbar.component.css'],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
+  animations: animations,
   host: {
     '(window:scroll)' : 'onScroll()'
   }
@@ -27,69 +27,59 @@ export class NavbarComponent {
     {
       text: 'About',
       sublinks: [
-        { url: '/about/mission'   , text: 'Mission'    },
-        { url: '/about/research'  , text: 'Research'   },
-        { url: '/about/members'   , text: 'Members'    },
-        { url: '/about/biomimicry', text: 'Biomimicry' }
+        { link: '/about/overview', text: 'Overview' },
+        { link: '/about/biomimicry', text: 'Biomimicry' },
+        { link: '/about/members', text: 'Members' }
       ]
+    },
+    {
+      text: 'Products',
+      sublinks: [
+        { link: '/products/aw-pmfc', text: 'AW-PMFC' },
+        { link: '/products/biosolar', text: 'Biosolar' }
+      ]
+    },
+    {
+      text: 'Blog',
+      link: '/blog'
+    },
+    {
+      text: 'Contact',
+      link: '/contact'
     }
   ];
-  sublinks: Link[] = [];
-  isNavbarCollapsed = true;
-  isSubnavbarCollapsed = true;
 
-  private activeIndex: number;
-  private routeIndex: number;
-  
+  activeNav: Navigation;
+  routeNav: Navigation;
+
   constructor(private router: Router) {
-    let urlMap = new Map<string, number>();
-    this.navs.forEach((nav: Navigation, i: number) => {
-      nav.sublinks.forEach((link: Link) => { urlMap.set(link.url, i); });
+
+    // Create mapping from url to nav
+    let navMap = new Map<string, Navigation>();
+    this.navs.forEach((nav: Navigation) => {
+      let sublinks = nav.sublinks;
+      if (sublinks) {
+        sublinks.forEach((link: Navigation) => {
+          navMap.set(link.link, nav);
+        });
+      }
+      else navMap.set(nav.link, nav);
     });
 
+    // Detect the nav based on the current url
     router.events.subscribe((event: Event) => {
-      this.routeIndex = urlMap.get(event.url);
-      this.hideSubnavbar();
+      if (event instanceof NavigationEnd) {
+        this.routeNav = navMap.get(event.url);
+      }
     });
-  }
-
-  toggleNavbar(): void {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-    this.isSubnavbarCollapsed = this.isNavbarCollapsed || this.isSubnavbarCollapsed;
-  }
-
-  hideNavbar(): void {
-    this.isNavbarCollapsed = true;
-  }
-
-  showSubnavbar(i: number): boolean {
-    if (i !== undefined) {
-      this.activeIndex = i;
-      this.sublinks = this.navs[i].sublinks;
-      this.isSubnavbarCollapsed = false;
-    }
-
-    return false;
-  }
-
-  hideSubnavbar(): void {
-    this.isSubnavbarCollapsed = true;
-    this.activeIndex = undefined;
-  }
-
-  isActiveSubnav(i: number): boolean {
-    return this.activeIndex == i || this.routeIndex == i;
   }
 
   private prevScrollTop: number = 0;
   onScroll() {
     let currentScrollTop = document.body.scrollTop;
-    if (currentScrollTop > this.prevScrollTop) {  // Scrolling down.
-      this.hideSubnavbar();
-      this.hideNavbar();
-    }
-    else if (this.isSubnavbarCollapsed) this.showSubnavbar(this.routeIndex);  // Scrolling up.
-
+    let isScrollingDown = currentScrollTop > this.prevScrollTop;
     this.prevScrollTop = currentScrollTop;
+
+    this.activeNav = isScrollingDown ? null : this.routeNav;
   };
 }
