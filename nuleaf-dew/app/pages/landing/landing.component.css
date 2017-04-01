@@ -2,8 +2,6 @@
   border: 10px solid #fff;
   border-radius: 10px;
   color: #fff;
-  padding: 10px 30px;
-  font-size: 3em;
 }
 .slide {
   height: 95vh;
@@ -14,7 +12,6 @@
 }
 .slide-text {
   color: #fff;
-  font-size: 1.4em;
 }
 
 #slide-1 {
