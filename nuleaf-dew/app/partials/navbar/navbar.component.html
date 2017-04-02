@@ -50,7 +50,8 @@
     <div class="navbar-nav mx-auto">
       <a *ngFor="let link of activeNav.sublinks" [@fadeInOut]="true"
         class="nav-item nav-link px-md-4 px-lg-5"
-        routerLinkActive="active" [routerLink]="link.link">{{ link.text }}</a>
+        routerLinkActive="active" [routerLink]="link.link"
+        (click)="activeNav = null">{{ link.text }}</a>
     </div>
   </div>
 </nav>

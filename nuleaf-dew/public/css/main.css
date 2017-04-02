@@ -1,3 +1,20 @@
+.slide-wrapper {
+  height: 100vh;
+  position: relative;
+}
+.slide-wrapper.navbar-offset {
+  padding-top: 54px;
+  margin-bottom: -54px;
+}
+.slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slide-wrapper.navbar-offset > .slide {
+  margin-top: -54px;
+}
+
 .btn-transparent {
   background: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 0.2s, border-color 0.3s;
