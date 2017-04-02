@@ -2,13 +2,23 @@
   border: 10px solid #fff;
   border-radius: 10px;
   color: #fff;
+  font-size: 2.5rem;
 }
-.slide {
-  height: 95vh;
+.slide-wrapper {
+  height: 100vh;
   position: relative;
 }
-.slide-body {
-  padding: 0 15px;
+.slide-wrapper.navbar-offset {
+  padding-top: 54px;
+  margin-bottom: -54px;
+}
+.slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.slide-wrapper.navbar-offset > .slide {
+  margin-top: -54px;
 }
 .slide-text {
   color: #fff;
@@ -18,26 +28,23 @@
   background: url(public/images/bg/lg/sharp-leaf.jpg) center center no-repeat;
   background-size: cover;
 }
-.slide-1-text {
-  margin-top: 10px;
-}
 #slide-1 > .slide-text {
   position: relative;
-  top: 16%;
+  top: 10%;
+}
+#slide-1 > .slide-btn {
+  position: absolute;
+  bottom: 5%;
+  margin-left: 5%;
 }
 #slide-1-text-1 {
   margin-left: 5%;
 }
 #slide-1-text-2 {
-  margin-left: 23%;
+  margin-left: 15%;
 }
 #slide-1-text-3 {
-  margin-left: 40%;
-}
-#slide-1 > .slide-btn-wrapper {
-  position: absolute;
-  bottom: 5%;
-  margin-left: 5%;
+  margin-left: 25%;
 }
 
 #slide-2 {
@@ -80,22 +87,45 @@
   text-align: center;
 }
 
+@media (min-width: 576px) {
+  #slide-1 > .slide-text {
+    top: 18%;
+  }
+  #slide-1-text-1 {
+    margin-left: 5%;
+  }
+  #slide-1-text-2 {
+    margin-left: 27%;
+  }
+  #slide-1-text-3 {
+    margin-left: 49%;
+  }
+}
+
 @media (min-width: 768px) {
+  .slide-wrapper.navbar-offset {
+    padding-top: 76px;
+    margin-bottom: -76px;
+  }
+  .slide-wrapper.navbar-offset > .slide {
+    margin-top: -76px;
+  }
+
   #slide-1 > .slide-text {
     top: 20%;
   }
+  #slide-1 > .slide-btn {
+    margin-left: 10%;
+    bottom: 15%;
+  }
   #slide-1-text-1 {
-    margin-left: 35%;
+    margin-left: 30%;
   }
   #slide-1-text-2 {
-    margin-left: 50%;
+    margin-left: 45%;
   }
   #slide-1-text-3 {
-    margin-left: 65%;
-  }
-  #slide-1 > .slide-btn-wrapper {
-    margin-left: 10%;
-    bottom: 10%;
+    margin-left: 60%;
   }
 
   #slide-2 .slide-text,
@@ -119,10 +149,10 @@
 
 @media (min-width: 992px) {
   #slide-1-text-1 {
-    margin-left: 48%;
+    margin-left: 40%;
   }
   #slide-1-text-2 {
-    margin-left: 59%;
+    margin-left: 55%;
   }
   #slide-1-text-3 {
     margin-left: 70%;
@@ -170,6 +200,10 @@
 }
 
 @media (min-width: 1600px) {
+  #slide-1 > .slide-btn {
+    bottom: 25%;
+    margin-left: 78%;
+  }
   #slide-1-text-1 {
     margin-left: 60%;
   }
@@ -178,10 +212,6 @@
   }
   #slide-1-text-3 {
     margin-left: 75%;
-  }
-  #slide-1 > .slide-btn-wrapper {
-    bottom: 25%;
-    margin-left: 78%;
   }
 
   #slide-2 .slide-text,
