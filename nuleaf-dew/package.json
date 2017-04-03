@@ -1,7 +1,7 @@
 {
   "name": "nuleaf-dew",
   "version": "1.0.0",
-  "description": "Front end angular2 application for NuLEAF Technologies.",
+  "description": "Front end Angular2 application for NuLeaf Tech Inc.",
   "scripts": {
     "start": "tsc && npm run copy:app:static && concurrently 'npm run tsc:w' 'lite-server' ",
     "server": "node server.js",
@@ -17,10 +17,9 @@
     "copy:aot": "npm run copy:aot:shim && npm run copy:aot:zone && npm run copy:aot:static",
     "copy:aot:shim": "copyfiles -f node_modules/core-js/client/shim.min.js aot",
     "copy:aot:zone": "copyfiles -f node_modules/zone.js/dist/zone.min.js aot",
-    "copy:aot:static": "cp -r public aot && cp index-aot.html aot/index.html",
+    "copy:aot:static": "cp -r public aot && cp index-aot.html aot/index.html"
   },
   "author": "Tuan Pham (https://github.com/ttpham0111",
-  "license": "ISC",
   "dependencies": {
     "@angular/animations": "~4.0.0",
     "@angular/common": "~4.0.0",
