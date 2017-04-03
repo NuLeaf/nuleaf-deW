@@ -39,10 +39,10 @@ export class NavbarComponent {
         { link: '/products/biosolar', text: 'Biosolar' }
       ]
     },
-    {
-      text: 'Blog',
-      link: '/blog'
-    },
+    // {
+    //   text: 'Blog',
+    //   link: '/blog'
+    // },
     {
       text: 'Contact',
       link: '/contact'
