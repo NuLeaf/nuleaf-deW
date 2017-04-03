@@ -27,7 +27,8 @@
 }
 
 #slide-1 {
-  background: #555;
+  background: url(public/images/bg/lg/fuji.png) center center no-repeat;
+  background-size: cover;
   color: #fff;
 }
 .divider {

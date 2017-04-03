@@ -1,4 +1,12 @@
+#nuleaf-brand {
+  max-height: 27px;
+}
+
 @media (min-width: 768px) {
+  #nuleaf-brand {
+    max-height: 30px;
+  }
+
   .navbar-themed {
     background-color: #fff;
     font-size: 1.5rem;
@@ -6,4 +14,10 @@
   .subnavbar {
     margin-top: 76px;
   } 
+}
+
+@media (min-width: 992px) {
+  #nuleaf-brand {
+    max-height: 52px;
+  }
 }

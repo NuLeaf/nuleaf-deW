@@ -11,7 +11,8 @@
 }
 
 #slide-1 {
-  background: #ffcd39;
+  background: url(public/images/bg/lg/farm.jpg) center center no-repeat;
+  background-size: cover;
   color: #fff;
 }
 #slide-1 > .slide-text {
