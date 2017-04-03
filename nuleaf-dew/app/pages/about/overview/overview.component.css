@@ -22,9 +22,13 @@
 #slide-4 {
   background: url('public/images/sm/leaf-fade.jpg') center center no-repeat;
   background-size: cover;
+  padding: 0 5%;
 }
 #slide-4 .slide-title {
   color: #53a7a3;
+}
+#slide-4 .slide-text {
+  font-weight: 400;
 }
 
 @media (min-width: 576px) {
@@ -77,6 +81,10 @@
   #slide-3 > .slide-body {
     width: 70%;
   }
+
+  #slide-4 {
+    padding: 0 10%;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -89,7 +97,11 @@
 
   #slide-3 > .slide-body {
     padding-left: 23% !important;
-    padding-top: 90px !important;
+    padding-top: 20vh !important;
     width: 58%;
+  }
+
+  #slide-4 {
+    padding: 0 15%;
   }
 }

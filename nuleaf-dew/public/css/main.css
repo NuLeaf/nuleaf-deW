@@ -7,6 +7,7 @@
   margin-bottom: -54px;
 }
 .slide {
+  overflow: auto;
   position: relative;
   height: 100%;
   width: 100%;
@@ -40,4 +41,14 @@
 .btn-transparent:hover:after {
   opacity: 1;
   margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .slide-wrapper.navbar-offset {
+    padding-top: 76px;
+    margin-bottom: -76px;
+  }
+  .slide-wrapper.navbar-offset > .slide {
+    margin-top: -76px;
+  }
 }

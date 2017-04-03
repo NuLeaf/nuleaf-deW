@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -31,8 +29,6 @@ import { ContactComponent } from './pages/contact/contact.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
-
-    NgbModule.forRoot(),
 
     AppRoutingModule
   ],

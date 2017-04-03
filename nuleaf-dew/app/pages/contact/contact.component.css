@@ -1,0 +1,36 @@
+.slide-panel {
+  background-color: #b2d6dd;
+  border-radius: 20px;
+  color: #fff;
+  max-width: 550px;
+}
+#slide-1 {
+  background: url(public/images/bg/lg/coffee-table.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+#submit-btn {
+  background-color: #a78181;
+  border-color: #917070;
+  float: right;
+}
+#submit-btn:hover {
+  background-color: #917070;
+}
+
+#social-btns {
+  color: #414752;
+}
+.social-icon {
+  color: #414752;
+}
+.social-icon:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (min-width: 1600px) {
+  #slide-1 {
+    padding-left: 6% !important;
+  }
+}

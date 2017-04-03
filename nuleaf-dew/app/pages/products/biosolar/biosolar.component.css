@@ -1,0 +1,59 @@
+#slide-1 {
+  background: url(public/images/bg/lg/mountain.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 15px;
+}
+
+#slide-2 {
+  background: url(public/images/bg/lg/purple-half.jpg) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 15px;
+}
+#slide-2 > .slide-text {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  #slide-1 {
+    padding-top: 50px;
+  }
+
+  #slide-2 {
+    padding: 50px 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  #slide-2 > .slide-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  #slide-2 > .slide-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #slide-1 {
+    padding-top: 80px;
+  }
+  #slide-1 > .slide-title {
+    width: 80%;
+  }
+
+  #slide-2 {
+    padding: 80px 15%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #slide-1 > .slide-title {
+    width: 70%;
+  }
+
+  #slide-2 {
+    padding: 100px 20%;
+  }
+}

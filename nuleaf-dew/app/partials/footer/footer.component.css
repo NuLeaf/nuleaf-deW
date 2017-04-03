@@ -21,3 +21,10 @@
     background-size: cover;
   }
 }
+
+@media (min-width: 1200px) {
+  #footer {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}

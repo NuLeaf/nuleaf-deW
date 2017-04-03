@@ -63,7 +63,7 @@ export class NavbarComponent {
           navMap.set(link.link, nav);
         });
       }
-      else navMap.set(nav.link, nav);
+      else navMap.set(nav.link, null);
     });
 
     // Detect the nav based on the current url

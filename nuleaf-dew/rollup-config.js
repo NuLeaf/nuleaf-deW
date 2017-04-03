@@ -4,7 +4,7 @@ import uglify from 'rollup-plugin-uglify';
 
 
 export default {
-  entry: 'dist/app/main-aot.js',
+  entry: 'app/main-aot.js',
   dest: 'aot/dist/build.js',
   sourceMap: false,
   format: 'iife',

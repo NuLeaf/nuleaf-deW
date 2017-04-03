@@ -205,12 +205,15 @@
     color: #c1c1c1;
     float: left;
   }
+  #slide-3 .slide-text {
+    width: 30%;
+  }
   #slide-3 .slide-btn {
     border-color: #c1c1c1;
   }
   #slide-3-text-1 {
     float: left;
-    width: 30%;
+    width: 80%;
   }
 }
 
