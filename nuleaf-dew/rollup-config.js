@@ -4,9 +4,10 @@ import uglify from 'rollup-plugin-uglify';
 
 
 export default {
-  entry: 'build/app/main-aot.js',
+  entry: 'app/main-aot.js',
   dest: 'aot/dist/build.js',
-  sourceMap: false,
+  sourceMap: true,
+  sourceMapFile: 'aot/dist/build.js.map',
   format: 'iife',
   onwarn: function(warning) {
     if ( warning.code === 'THIS_IS_UNDEFINED' ) { return; }
