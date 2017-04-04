@@ -1,5 +1,6 @@
 .slide-wrapper {
   height: 100vh;
+  overflow-y: auto;
   position: relative;
 }
 .slide-wrapper.navbar-offset {
