@@ -2,6 +2,10 @@
   background-color: #383838;
   color: #fff;
 }
+.footer-text {
+  max-width: 47rem;
+}
+
 .theme-btn {
   border: 4px solid #fff;
   border-radius: 50px;
@@ -17,14 +21,7 @@
 
 @media (min-width: 992px) {
   #footer {
-    background: url('public/images/bg/lg/leaf-dew.jpg') center center no-repeat;
+    background: url('public/images/bg/lg/leaf-dew.jpg') right bottom no-repeat;
     background-size: cover;
-  }
-}
-
-@media (min-width: 1200px) {
-  #footer {
-    padding-left: 7%;
-    padding-right: 7%;
   }
 }
