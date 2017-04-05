@@ -83,8 +83,27 @@
 }
 
 @media (min-width: 1200px) {
+  #slide-1 .slide-title {
+    font-size: 3rem;
+  }
+
+  .plaque {
+    padding: 25px 0 50px 0;
+  }
+  .plaque-img-wrapper {
+    max-width: 350px;
+  }
+  .plaque-name {
+    font-size: 1.5rem;
+  }
+  .plaque-title {
+    font-size: 1.4rem;
+  }
+  .overlay {
+    font-size: 1rem;
+  }
   .divider {
-    width: 8%;
+    width: 10%;
   }
 
   #slide-2-p-2 {
