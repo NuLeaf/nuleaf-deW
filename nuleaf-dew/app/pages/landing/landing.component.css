@@ -41,6 +41,7 @@
   color: #fff;
   position: absolute;
   bottom: 0;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
 
 #slide-3 {
@@ -53,6 +54,10 @@
   bottom: 0;
   right: 0;
   text-align: right;
+}
+#slide-3-title-1,
+#slide-3-text-1 {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 #slide-3 .slide-btn {
   border-color: #000;
@@ -168,6 +173,10 @@
   #slide-3 .slide-btn {
     border-color: #fff;
     color: #fff;
+  }
+  #slide-3-title-1,
+  #slide-3-text-1 {
+    text-shadow: none;
   }
 }
 

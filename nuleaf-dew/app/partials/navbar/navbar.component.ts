@@ -29,7 +29,7 @@ export class NavbarComponent {
       sublinks: [
         { link: '/about/overview', text: 'Overview' },
         { link: '/about/biomimicry', text: 'Biomimicry' },
-        { link: '/about/members', text: 'Members' }
+        { link: '/about/team', text: 'team' }
       ]
     },
     {

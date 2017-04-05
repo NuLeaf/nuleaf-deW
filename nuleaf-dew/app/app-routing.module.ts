@@ -26,7 +26,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
       { path: 'about/overview', component: OverviewComponent },
       { path: 'about/biomimicry', component: BiomimicryComponent },
-      { path: 'about/members', component: MembersComponent },
+      { path: 'about/team', component: MembersComponent },
 
       { path: 'products/aw-pmfc', component: AwpmfcComponent },
       { path: 'products/biosolar', component: BiosolarComponent },
