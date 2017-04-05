@@ -43,6 +43,21 @@
   bottom: 0;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
+#slide-2 .slide-btn {
+  -moz-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  -webkit-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+
+  -o-transition: box-shadow 0.3s 0;
+  -moz-transition: box-shadow 0.3s 0;
+  -webkit-transition: box-shadow 0.3s 0;
+  transition: box-shadow 0.3s 0;
+}
+#slide-2 .btn-transparent:hover {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 #slide-3 {
   background: url(public/images/bg/lg/sun.jpg) center center no-repeat;
@@ -58,9 +73,9 @@
 }
 #slide-3 .slide-btn {
   border-color: #000;
-  -moz-box-shadow: 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;
+  -moz-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+  -webkit-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
   color: #000;
 }
 
