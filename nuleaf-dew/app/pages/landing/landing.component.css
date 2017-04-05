@@ -47,16 +47,6 @@
   -moz-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
   -webkit-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
   box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
-
-  -o-transition: box-shadow 0.3s 0;
-  -moz-transition: box-shadow 0.3s 0;
-  -webkit-transition: box-shadow 0.3s 0;
-  transition: box-shadow 0.3s 0;
-}
-#slide-2 .btn-transparent:hover {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 #slide-3 {
@@ -94,7 +84,17 @@
 }
 #slide-2 .slide-btn,
 #slide-3 .slide-btn {
+  -o-transition: box-shadow 0.3s 0;
+  -moz-transition: box-shadow 0.3s 0;
+  -webkit-transition: box-shadow 0.3s 0;
+  transition: box-shadow 0.3s 0;
   font-size: 1.4rem;
+}
+#slide-3 .btn-transparent:hover,
+#slide-2 .btn-transparent:hover {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 #slide-4 {
