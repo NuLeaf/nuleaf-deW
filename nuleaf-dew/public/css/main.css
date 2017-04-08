@@ -1,3 +1,20 @@
+.box-outlined {
+  -moz-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  -webkit-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+}
+.box-outlined-inverse {
+  -moz-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+  -webkit-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+}
+.text-outlined {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+.text-outlined-inverse {
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
 .slide-wrapper {
   height: 100vh;
   overflow-y: auto;
@@ -18,10 +35,11 @@
 
 .btn-transparent {
   background: rgba(0, 0, 0, 0);
-  -webkit-transition: background-color 0.2s, border-color 0.3s;
-  -moz-transition: background-color 0.2s, border-color 0.3s;
-  -o-transition: background-color 0.2s, border-color 0.3s;
-  transition: background-color 0.2s, border-color 0.3s;
+  padding: 0.2em 0.5em;
+  -webkit-transition: background-color 0.2s, border-color 0.3s, padding 0.2s;
+  -moz-transition: background-color 0.2s, border-color 0.3s, padding 0.2s;
+  -o-transition: background-color 0.2s, border-color 0.3s, padding 0.2s;
+  transition: background-color 0.2s, border-color 0.3s, padding 0.2s;
 }
 .btn-transparent:after {
   font-family: FontAwesome;
@@ -37,6 +55,13 @@
 .btn-transparent:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: transparent !important;
+  padding-right: 0.9em;
+}
+.btn-transparent.box-outlined:hover,
+.btn-transparent.box-outlined-inverse:hover {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .btn-transparent:hover:after {
   opacity: 1;
@@ -58,5 +83,21 @@
   .slide-wrapper.navbar-offset > .slide,
   .slide-wrapper-md.navbar-offset > .slide {
     margin-top: -76px;
+  }
+}
+
+@media (min-width: 992px) {
+  .box-outlined-lg {
+    -moz-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+    -webkit-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+    box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  }
+  .text-outlined-lg {
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  }
+  .btn-transparent.box-outlined-lg:hover {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }

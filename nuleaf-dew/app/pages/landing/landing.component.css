@@ -1,27 +1,37 @@
-.slide-btn {
-  border: 5px solid #fff;
-  border-radius: 10px;
+.slides {
   color: #fff;
+  font-size: 1rem;
+}
+.slide {
+  font-size: 1em;
+}
+.slide-title {
+  font-size: 1.5em;
 }
 .slide-text {
+  font-size: 1em;
+}
+.slide-btn {
+  border: 5px solid #fff;
+  border-radius: 5px;
   color: #fff;
+  font-size: 1.3em;
 }
 
 #slide-1 {
   background: url(public/images/bg/lg/sharp-leaf.jpg) center center no-repeat;
   background-size: cover;
 }
-#slide-1 > .slide-btn {
-  font-size: 1.6rem;
-  position: absolute;
-  bottom: 5%;
-  margin-left: 5%;
-}
 #slide-1 > .slide-text {
-  font-size: 1.5rem;
+  font-size: 1.3em;
   position: absolute;
   top: 15%;
   left: 2%;
+}
+#slide-1 > .slide-btn {
+  position: absolute;
+  bottom: 5%;
+  margin-left: 5%;
 }
 #slide-1-text-1 {
   margin-left: 0;
@@ -41,12 +51,7 @@
   color: #fff;
   position: absolute;
   bottom: 0;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-}
-#slide-2 .slide-btn {
-  -moz-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
-  -webkit-box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
-  box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000;
+  max-width: 13em;
 }
 
 #slide-3 {
@@ -59,58 +64,30 @@
   bottom: 0;
   right: 0;
   text-align: right;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  max-width: 15em;
 }
 #slide-3 .slide-btn {
   border-color: #000;
-  -moz-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
   color: #000;
 }
 
 #slide-2 > .slide-body,
 #slide-3 > .slide-body {
   margin: 10px;
-  width: 17rem;
-}
-#slide-2-title-1,
-#slide-3-title-1 {
-  font-size: 1.5rem;
-}
-#slide-2-text-1,
-#slide-3-text-1 {
-  font-size: 1rem;
-}
-#slide-2 .slide-btn,
-#slide-3 .slide-btn {
-  -o-transition: box-shadow 0.3s 0;
-  -moz-transition: box-shadow 0.3s 0;
-  -webkit-transition: box-shadow 0.3s 0;
-  transition: box-shadow 0.3s 0;
-  font-size: 1.4rem;
-}
-#slide-3 .btn-transparent:hover,
-#slide-2 .btn-transparent:hover {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 #slide-4 {
   background: url(public/images/bg/lg/cliff.jpg) center center no-repeat;
   background-size: cover;
 }
-#slide-4 .slide-text {
+#slide-4 .slide-title {
+  font-size: 1.5em;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 30px 10px;
+  margin: 3em 10px;
   text-align: center;
-}
-#slide-4-title-1 {
-  font-size: 1.4rem;
 }
 
 @media (min-width: 576px) {
@@ -125,12 +102,14 @@
 }
 
 @media (min-width: 768px) {
+  .slide {
+    font-size: 1.2em;
+  }
+
   #slide-1 > .slide-text {
-    font-size: 1.7rem;
     top: 20%;
   }
   #slide-1 > .slide-btn {
-    font-size: 1.8rem;
     margin-left: 10%;
     bottom: 15%;
   }
@@ -145,35 +124,16 @@
   }
 
   #slide-2 > .slide-body {
-    width: 20rem;
+    max-width: 18em;
   }
 
   #slide-2 > .slide-body,
   #slide-3 > .slide-body {
     margin: 30px 15px;
   }
-  #slide-2-title-1,
-  #slide-3-title-1 {
-    font-size: 1.7rem;
-  }
-  #slide-2-text-1,
-  #slide-3-text-1 {
-    font-size: 1.2rem;
-  }
-  #slide-2 .slide-btn,
-  #slide-3 .slide-btn {
-    font-size: 1.6rem;
-  }
 
   #slide-3 > .slide-body {
-    width: 18rem;
-  }
-
-  #slide-4 .slide-text {
-    margin-bottom: 60px;
-  }
-  #slide-4-title-1 {
-    font-size: 1.7rem;
+    max-width: 15em;
   }
 }
 
@@ -184,64 +144,48 @@
     right: auto;
     text-align: left;
     text-shadow: none;
-    width: 15rem;
+    max-width: 13em;
   }
   #slide-3 .slide-btn {
     border-color: #fff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
     color: #fff;
   }
 }
 
 @media (min-width: 1200px) {
+  .slide {
+    font-size: 1.3em;
+  }
+
   #slide-1 > .slide-btn {
+    margin-left: 0;
     bottom: 25%;
-    margin-left: 78%;
+    right: 3%;
   }
   #slide-1 > .slide-text {
     left: 55%;
   }
 
   #slide-2 > .slide-body {
-    width: 23rem;
+    max-width: 17em;
   }
 
   #slide-2 > .slide-body,
   #slide-3 > .slide-body {
     margin: 45px 20px;
   }
-  #slide-2-title-1,
-  #slide-3-title-1 {
-    font-size: 2.1rem;
-  }
-  #slide-2-text-1,
-  #slide-3-text-1 {
-    font-size: 1.4rem;
-  }
-  #slide-2 .slide-btn,
-  #slide-3 .slide-btn {
-    font-size: 2rem;
-  }
 
   #slide-3 > .slide-body {
-    width: 22rem;
-  }
-
-  #slide-4 .slide-text {
-    margin-bottom: 100px;
-  }
-  #slide-4-title-1 {
-    font-size: 2.2rem;
+    max-width: 15em;
   }
 }
 
 @media (min-width: 1600px) {
-  #slide-1 > .slide-text {
-    font-size: 1.9rem;
+  .slide {
+    font-size: 1.5em;
   }
+
   #slide-1 > .slide-btn {
-    font-size: 2rem;
+    right: 10%;
   }
 }
