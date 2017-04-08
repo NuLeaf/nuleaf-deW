@@ -24,7 +24,7 @@
   padding-top: 54px;
   margin-bottom: -54px;
 }
-.slide {
+.slide-wrapper > .slide {
   position: relative;
   height: 100%;
   width: 100%;
