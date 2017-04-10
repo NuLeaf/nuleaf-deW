@@ -1,8 +1,21 @@
+.slides {
+  font-size: 1rem;
+}
+.slide {
+  font-size: 1em;
+}
+.slide-title {
+  font-size: 1.4em;
+}
+
 #slide-1 {
   background: url(public/images/bg/lg/mountain.jpg) center center no-repeat;
   background-size: cover;
   color: #fff;
   padding: 15px;
+}
+#slide-1> .slide-title {
+  max-width: 25em;
 }
 
 #slide-2 {
@@ -11,49 +24,42 @@
   color: #fff;
   padding: 15px;
 }
-#slide-2 > .slide-text {
-  font-size: 1.1rem;
+#slide-2 > .slide-body {
+  max-width: 50em; 
+}
+#slide-2 .slide-title {
+  margin-bottom: 1em;
 }
 
+
 @media (min-width: 768px) {
-  #slide-1 {
-    padding-top: 50px;
+  .slide {
+    font-size: 1.1em;
   }
 
-  #slide-2 {
-    padding: 50px 10%;
+  #slide-1 {
+    padding-top: 50px;
   }
 }
 
 @media (min-width: 992px) {
-  #slide-2 > .slide-title {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-  }
-  #slide-2 > .slide-text {
-    font-size: 1.5rem;
+  .slide {
+    font-size: 1.2em;
   }
 }
 
 @media (min-width: 1200px) {
-  #slide-1 {
-    padding-top: 80px;
-  }
-  #slide-1 > .slide-title {
-    width: 80%;
+  .slide {
+    font-size: 1.3em;
   }
 
-  #slide-2 {
-    padding: 80px 15%;
+  #slide-1 {
+    padding-top: 80px;
   }
 }
 
 @media (min-width: 1600px) {
-  #slide-1 > .slide-title {
-    width: 70%;
-  }
-
-  #slide-2 {
-    padding: 100px 20%;
+  .slide {
+    font-size: 1.4em;
   }
 }
