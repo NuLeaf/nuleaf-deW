@@ -1,3 +1,10 @@
+.slides {
+  font-size: 1rem;
+}
+.slide {
+  font-size: 1em;
+}
+
 .slide-panel {
   background-color: #b2d6dd;
   border-radius: 20px;
@@ -23,13 +30,42 @@
 }
 .social-icon {
   color: #414752;
+  font-size: 1.6em;
 }
 .social-icon:hover {
   color: #000;
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .slide {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .slide {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slide {
+    font-size: 1.3em;
+  }
+}
+
 @media (min-width: 1600px) {
+  .slide {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .slide {
+    font-size: 1.4em;
+  }
+
   #slide-1 {
     padding-left: 6% !important;
   }
