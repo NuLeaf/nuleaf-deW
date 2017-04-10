@@ -1,9 +1,26 @@
+.slides {
+  font-size: 1rem;
+}
+.slide {
+  font-size: 1em;
+}
+.slide-title {
+  font-size: 2.2em;
+}
+h4.slide-title {
+  font-size: 1.3em;
+}
+.slide-text {
+  font-size: 1.2em;
+}
+
+
 .plaque {
   margin: 15px 0;
 }
 .plaque-img-wrapper {
   max-width: 275px;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
   position: relative;
 }
 .plaque-img-caption {
@@ -15,7 +32,7 @@
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 500px;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   opacity: 0;
   overflow: hidden;
   padding: 35px;
@@ -31,13 +48,13 @@
 }
 .divider {
   border-color: #fff;
-  width: 50px;
+  width: 3.5em;
 }
 .plaque-name {
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 .plaque-title {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 #slide-1 {
@@ -54,12 +71,12 @@
   padding: 30px 0;
 }
 
-#slide-2-p-2 {
-  padding: 60px 15px 15px 15px;
-}
 #slide-2-p-2 .divider {
-  width: 5rem;
-  margin: 0.5rem 0;
+  width: 5em;
+  margin: 0.5em 0;
+}
+#slide-2-p-2 > .slide-body {
+  max-width: 43em;
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -76,15 +93,17 @@
   #slide-2 {
     padding: 60px 0;
   }
+}
 
-  #slide-2-p-2 {
-    padding: 100px 5% 15px 5%;
+@media (min-width: 992px) {
+  .slides {
+    font-size: 1.2em;
   }
 }
 
 @media (min-width: 1200px) {
-  #slide-1 .slide-title {
-    font-size: 3rem;
+  .slides {
+    font-size: 1.3em;
   }
 
   .plaque {
@@ -92,22 +111,5 @@
   }
   .plaque-img-wrapper {
     max-width: 350px;
-  }
-  .plaque-name {
-    font-size: 1.5rem;
-  }
-  .plaque-title {
-    font-size: 1.4rem;
-  }
-  .overlay {
-    font-size: 1rem;
-  }
-  .divider {
-    width: 10%;
-    margin: 25px auto 15px auto;
-  }
-
-  #slide-2-p-2 {
-    padding: 100px 10% 15px 10%;
   }
 }
