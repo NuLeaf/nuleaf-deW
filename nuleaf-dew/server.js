@@ -1,8 +1,9 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 var path = require('path');
-var http = require('http');
+var protocol = process.env.ENABLE_SSL ? require('https') : require('http');
 
 var api = require('./server/api');
 
@@ -22,7 +23,14 @@ app.get('*', function(req, res) {
 var port = process.env.PORT || '3000';
 app.set('port', port);
 
-var server = http.createServer(app);
+var options = {};
+if (process.env.ENABLE_SSL) {
+  options.ca = fs.readFileSync(process.env.CACERT_FILE);
+  options.key = fs.readFileSync(process.env.KEY_FILE);
+  options.cert = fs.readFileSync(process.env.CERT_FILE);
+}
+
+var server = protocol.createServer(options, app);
 
 server.listen(port, function() {
   console.log('API running on port ' + port);
