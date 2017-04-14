@@ -23,6 +23,8 @@ import { BlogComponent } from './pages/blog/blog.component';
 
 import { ContactComponent } from './pages/contact/contact.component';
 
+import { MaximizeHeightDirective } from './directives/maximize-height';
+
 
 @NgModule({
   imports: [
@@ -49,7 +51,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     
     BlogComponent,
 
-    ContactComponent
+    ContactComponent,
+
+    MaximizeHeightDirective
   ],
   providers: [],
   bootstrap: [
