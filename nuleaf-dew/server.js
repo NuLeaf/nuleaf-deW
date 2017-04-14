@@ -41,3 +41,12 @@ var server = protocol.createServer(options, app);
 server.listen(port, function() {
   console.log('API running on port ' + port);
 });
+
+// Redirect HTTP traffic if on HTTPS
+if (process.env.ENABLE_SSL) {
+  var http = require('http');
+  http.createServer(function(req, res) {
+      res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+      res.end();
+  }).listen(80);
+}
