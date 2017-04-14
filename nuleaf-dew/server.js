@@ -23,14 +23,13 @@ app.get('*', function(req, res) {
 var port = process.env.PORT || '3000';
 app.set('port', port);
 
-var options = {};
 if (process.env.ENABLE_SSL) {
-  options.ca = fs.readFileSync(process.env.CACERT_FILE);
-  options.key = fs.readFileSync(process.env.KEY_FILE);
-  options.cert = fs.readFileSync(process.env.CERT_FILE);
+  app.set('ca', fs.readFileSync(process.env.CACERT_FILE));
+  app.set('key', fs.readFileSync(process.env.KEY_FILE));
+  app.set('cert', fs.readFileSync(process.env.CERT_FILE));
 }
 
-var server = protocol.createServer(options, app);
+var server = protocol.createServer(app);
 
 server.listen(port, function() {
   console.log('API running on port ' + port);
