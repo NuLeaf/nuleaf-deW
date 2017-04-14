@@ -21,20 +21,22 @@ app.get('*', function(req, res) {
 });
 
 var port = process.env.PORT || '3000';
-app.set('port', port);
+
+var options = {};
+
 
 if (process.env.ENABLE_SSL) {
   if (process.env.CACERT_FILES) {
-    app.set('ca', process.env.CACERT_FILES.split(' ').map(function(cacert) {
+    options.ca = process.env.CACERT_FILES.split(' ').map(function(cacert) {
       return fs.readFileSync(cacert, 'utf8');
-    }));
+    });
   }
 
-  if (process.env.KEY_FILE) app.set('key', fs.readFileSync(process.env.KEY_FILE, 'utf8'));
-  if (process.env.CERT_FILE) app.set('cert', fs.readFileSync(process.env.CERT_FILE, 'utf8'));
+  if (process.env.KEY_FILE) options.key = fs.readFileSync(process.env.KEY_FILE, 'utf8');
+  if (process.env.CERT_FILE) options.cert = fs.readFileSync(process.env.CERT_FILE, 'utf8');
 }
 
-var server = protocol.createServer(app);
+var server = protocol.createServer(options, app);
 
 server.listen(port, function() {
   console.log('API running on port ' + port);
