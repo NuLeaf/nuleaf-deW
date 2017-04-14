@@ -24,7 +24,7 @@ var port = process.env.PORT || '3000';
 app.set('port', port);
 
 if (process.env.ENABLE_SSL) {
-  app.set('ca', process.env.CACERT_FILES.split().map(function(cacert) {
+  app.set('ca', process.env.CACERT_FILES.split(' ').map(function(cacert) {
     return fs.readFileSync(cacert, 'utf8');
   }));
   app.set('key', fs.readFileSync(process.env.KEY_FILE, 'utf8'));
