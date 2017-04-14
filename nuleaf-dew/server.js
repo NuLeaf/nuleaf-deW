@@ -24,11 +24,14 @@ var port = process.env.PORT || '3000';
 app.set('port', port);
 
 if (process.env.ENABLE_SSL) {
-  app.set('ca', process.env.CACERT_FILES.split(' ').map(function(cacert) {
-    return fs.readFileSync(cacert, 'utf8');
-  }));
-  app.set('key', fs.readFileSync(process.env.KEY_FILE, 'utf8'));
-  app.set('cert', fs.readFileSync(process.env.CERT_FILE, 'utf8'));
+  if (process.env.CACERT_FILES) {
+    app.set('ca', process.env.CACERT_FILES.split(' ').map(function(cacert) {
+      return fs.readFileSync(cacert, 'utf8');
+    }));
+  }
+
+  if (process.env.KEY_FILE) app.set('key', fs.readFileSync(process.env.KEY_FILE, 'utf8'));
+  if (process.env.CERT_FILE) app.set('cert', fs.readFileSync(process.env.CERT_FILE, 'utf8'));
 }
 
 var server = protocol.createServer(app);
